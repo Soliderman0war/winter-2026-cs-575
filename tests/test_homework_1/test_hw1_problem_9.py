@@ -9,12 +9,12 @@ def test_homework_problem_9() -> None:
 
     # when
     ## FIX THIS ADJACENCY LIST
-    adjacency_list: dict[int, set[int]] = {1: {2},
-                                           2: {3},
-                                           3: {4},
-                                           4: {5},
-                                           5: {1},
-                                           6: {5},
+    adjacency_list: dict[int, set[int]] = {1: {2,3,4,5},
+                                           2: {1,3},
+                                           3: {1,2,4},
+                                           4: {1,3,5},
+                                           5: {1,4,6},
+                                           6: {5,7},
                                            7: {6}}
     G = adjacency_list_to_graph(adjacency_list)
 
